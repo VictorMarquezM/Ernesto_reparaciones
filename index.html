@@ -133,25 +133,46 @@
     </head>
     <body>
         <div class="container">
-            <h2>Formulario de Contacto</h2>
-            <form action="mailto:ernestomontes45380@gmail.com" method="post" enctype="text/plain">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
-                
-                <label for="asunto">Asunto:</label>
-                <input type="text" id="asunto" name="asunto" required>
-                
-                <label for="comentario">Comentario:</label>
-                <textarea id="comentario" name="comentario" rows="5" required></textarea>
-                
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </body>
-    </html>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Contacto</title>
+</head>
+<body>
+
+<h2>Formulario de Contacto</h2>
+
+<form id="contactForm">
+  <label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre" required><br>
+
+  <label for="telefono">Teléfono:</label><br>
+  <input type="tel" id="telefono" name="telefono" required><br>
+
+  <label for="asunto">Asunto:</label><br>
+  <input type="text" id="asunto" name="asunto" required><br>
+
+  <label for="comentarios">Comentarios:</label><br>
+  <textarea id="comentarios" name="comentarios" rows="4" required></textarea><br>
+
+  <input type="button" value="Enviar" onclick="enviarWhatsApp()">
+</form>
+
+<script>
+function enviarWhatsApp() {
+  var nombre = document.getElementById("nombre").value;
+  var telefono = document.getElementById("telefono").value;
+  var asunto = document.getElementById("asunto").value;
+  var comentarios = document.getElementById("comentarios").value;
+
+  var mensaje = encodeURIComponent("Nombre: " + nombre + "\nTeléfono: " + telefono + "\nAsunto: " + asunto + "\nComentarios: " + comentarios);
+
+  // Abre una nueva ventana de chat de WhatsApp con los datos precargados
+  window.open("https://wa.me/523741131171/?text=" + mensaje, "_blank");
+}
+</script>
+
+</body>
+</html>
+
 
     <section id="contacto">
         <h2>Contacto</h2>
@@ -174,7 +195,7 @@
         </style>
     </head>
     <body>
-        <a id="whatsapp" href="https://wa.link/cov0tx" target="_blank">
+        <a id="whatsapp" href="https://wa.link/5yic9l" target="_blank">
             <img src="https://th.bing.com/th/id/OIP.HztGi2n5_lCYZB6V8KCQRgHaHc?w=197&h=198&c=7&r=0&o=5&pid=1.7" alt="WhatsApp" width="50" height="50">
         </a>
     </body>
